@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="iTunesRSSFeedExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cRU-kq-qaD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="DV0-dF-vv6">
+                                    <size key="itemSize" width="208" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="jVi-M9-ECv" customClass="CollectionViewCell" customModule="iTunesRSSFeedExample" customModuleProvider="target">
+                                        <rect key="frame" x="83.5" y="0.0" width="208" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="20d-LT-T6r">
+                                            <rect key="frame" x="0.0" y="0.0" width="208" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GeV-eb-lhF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="208" height="170"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="170" id="AYN-ii-TXO"/>
+                                                        <constraint firstAttribute="width" constant="208" id="cuH-gM-D31"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Biber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofr-34-5oJ" userLabel="albumnName">
+                                                    <rect key="frame" x="0.0" y="170" width="208" height="30"/>
+                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Ru2-p3-H2G"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsF-Ki-WPO" userLabel="subTtitle">
+                                                    <rect key="frame" x="0.0" y="200" width="208" height="49"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="49" id="fRK-72-zO7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GeV-eb-lhF" firstAttribute="leading" secondItem="20d-LT-T6r" secondAttribute="leading" id="CZj-XS-Ezu"/>
+                                                <constraint firstItem="gsF-Ki-WPO" firstAttribute="top" secondItem="Ofr-34-5oJ" secondAttribute="bottom" id="M3s-CS-LgG"/>
+                                                <constraint firstItem="GeV-eb-lhF" firstAttribute="leading" secondItem="Ofr-34-5oJ" secondAttribute="leading" id="W9P-bD-6Vp"/>
+                                                <constraint firstItem="Ofr-34-5oJ" firstAttribute="leading" secondItem="gsF-Ki-WPO" secondAttribute="leading" id="fc9-X9-b0T"/>
+                                                <constraint firstItem="Ofr-34-5oJ" firstAttribute="trailing" secondItem="gsF-Ki-WPO" secondAttribute="trailing" id="iTe-4R-nwr"/>
+                                                <constraint firstItem="GeV-eb-lhF" firstAttribute="top" secondItem="20d-LT-T6r" secondAttribute="top" id="nHc-P0-uzE"/>
+                                                <constraint firstItem="Ofr-34-5oJ" firstAttribute="top" secondItem="GeV-eb-lhF" secondAttribute="bottom" id="rto-Le-Xbv"/>
+                                                <constraint firstItem="GeV-eb-lhF" firstAttribute="trailing" secondItem="Ofr-34-5oJ" secondAttribute="trailing" id="v5x-Vv-oE2"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="customSize" width="208" height="250"/>
+                                        <connections>
+                                            <outlet property="albumnImage" destination="GeV-eb-lhF" id="Kh6-vg-9DY"/>
+                                            <outlet property="albumnName" destination="Ofr-34-5oJ" id="gdu-S9-FS2"/>
+                                            <outlet property="subTitle" destination="gsF-Ki-WPO" id="q6Y-S5-R2d"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KhQ-jm-fSH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Q2q-pN-EiA"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cRU-kq-qaD" secondAttribute="trailing" id="7JU-jY-vTN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cRU-kq-qaD" secondAttribute="bottom" id="efA-70-SgN"/>
+                            <constraint firstItem="cRU-kq-qaD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g7y-o0-7PD"/>
+                            <constraint firstItem="cRU-kq-qaD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="u2c-jQ-OcL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
